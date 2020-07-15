@@ -17,12 +17,19 @@ app.listen(3000, function () {
 
    app.get("/api/movies/:id", (req, res) => {
     let id = req.params.id;
-    let movies = repoContext.products.findMovieById(id);
+    let movies = repoContext.movies.findMovieById(id);
     res.send(movies);
    });
 
-   app.post("/api/Movies", (req, res) => {
+   app.post("/api/movies", (req, res) => {
     let newMovie = req.body;
-    let addedMovie = repoContext.Movies.createMovie(newMovie);
+    let addedMovie = repoContext.movies.createMovie(newMovie);
     res.send(addedMovie);
    });
+
+   app.put("/api/movies", (req, res) => {
+    let movieToUpdate = req.body;
+    let updatedMovie = repoContext.movies.updateMovie(movieToUpdate);
+   });
+
+   
