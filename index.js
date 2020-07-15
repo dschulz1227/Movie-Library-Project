@@ -1,3 +1,5 @@
+const validators = require("./validators/custom-validations.js");
+
 const repoContext = require("./repository/repository-wrapper.js");
 
 const express = require('express');
@@ -5,6 +7,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use((req, res, next) => validators.body(req, res, next));
 
 app.listen(3000, function () {
     console.log("Server started. Listening on port 3000.");
@@ -30,6 +33,6 @@ app.listen(3000, function () {
    app.put("/api/movies", (req, res) => {
     let movieToUpdate = req.body;
     let updatedMovie = repoContext.movies.updateMovie(movieToUpdate);
-    repo.send(updatedMovie);
+    res.send(updatedMovie);
    });
 
