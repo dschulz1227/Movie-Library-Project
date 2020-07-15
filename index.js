@@ -30,7 +30,7 @@ app.listen(3000, function () {
    app.put("/api/movies", (req, res) => {
     let movieToUpdate = req.body;
     let updatedMovie = repoContext.movies.updateMovie(movieToUpdate);
-    repo.send(updatedMovie);
+    res.send(updatedMovie);
    });
 
    app.delete("/api/movies/:id", (req, res) => {
