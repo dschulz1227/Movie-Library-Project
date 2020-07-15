@@ -33,3 +33,11 @@ app.listen(3000, function () {
     repo.send(updatedMovie);
    });
 
+   app.delete("/api/movies/:id", (req, res) => {
+    let id = req.params.id;
+    let updatedDataSet = repoContext.movies.delteMovie(id);
+    res.send(updatedDataSet);
+   })
+
+
+
