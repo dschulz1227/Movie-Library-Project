@@ -1,0 +1,22 @@
+{
+  "name": "movie-library-project",
+  "version": "1.0.0",
+  "description": "Project for devCodeCamp",
+  "main": "movieLibrary.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dschulz1227/Movie-Library-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dschulz1227/Movie-Library-Project/issues"
+  },
+  "homepage": "https://github.com/dschulz1227/Movie-Library-Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
