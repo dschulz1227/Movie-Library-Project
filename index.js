@@ -35,7 +35,7 @@ app.listen(3000, function () {
 
    app.delete("/api/movies/:id", (req, res) => {
     let id = req.params.id;
-    let updatedDataSet = repoContext.movies.delteMovie(id);
+    let updatedDataSet = repoContext.movies.deleteMovie(id);
     res.send(updatedDataSet);
    })
 
