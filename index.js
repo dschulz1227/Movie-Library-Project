@@ -21,7 +21,7 @@ app.listen(3000, function () {
     res.send(movies);
    });
 
-   app.post("/api/Movies", (req, res) => {
+   app.post("/api/movies", (req, res) => {
     let newMovie = req.body;
     let addedMovie = repoContext.Movies.createMovie(newMovie);
     res.send(addedMovie);
