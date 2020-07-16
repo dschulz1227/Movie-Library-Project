@@ -54,4 +54,9 @@ function createMovie(){
     })
 
     
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 90959e56c776c4c527cf8796813cdff7f6eac998
