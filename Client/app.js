@@ -55,9 +55,3 @@ function createMovie(){
 
     
 }
-
-
-<label>
-    
-
-</label>
