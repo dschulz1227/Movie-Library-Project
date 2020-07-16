@@ -1,7 +1,3 @@
-
-
-
-
 var cors = require("cors");
 const validators = require("./validators/custom-validations.js");
 
