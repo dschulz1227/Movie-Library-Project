@@ -1,6 +1,10 @@
 "use strict"
 
 $(document).ready(function () {
+    getAllMovies();
+})
+
+function getAllMovies(){
     $.ajax({
         crossDomain: true,
         contentType: "application/json",
@@ -10,6 +14,7 @@ $(document).ready(function () {
 
         success: function (data, second, third) {
             // let result = JSON.stringify(data)
+            $("#movieTable").find("tbody").html("");
             for (let i = 0; i < data.length; i++) {
                 $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td><td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td><td>${data[i]["director"]}</td></tr>`)
 
@@ -20,29 +25,21 @@ $(document).ready(function () {
             console.log(errorThrown);
         }
     })
-})
-
-function getAllMovies(){
-    $.ajax({
-        crossDomain: true,
-        contentType: "application/json",
-        url: "http://localhost:3000/api/movies",
-        dataType: "json",
-        type: "GET"
-    }
-    )}
-
+}
 function getMovieObject(){
     var data = {
-    "id": document.getElementById('id').value,
+    // "id": document.getElementById('id').value,
     "title": document.getElementById('title').value,
     "genre": document.getElementById('genre').value,
     "director":document.getElementById('director').value
     }
+    return data;
 }
 
 function createMovie(){
+    
     var data = getMovieObject();
+    console.log(data)
     $(document).ready(function(){
         $.ajax({
             type:'POST',
