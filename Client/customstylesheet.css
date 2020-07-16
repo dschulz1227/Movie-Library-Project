@@ -40,3 +40,17 @@
     max-width: 50%;
     
 }
+
+.header{
+    font-family: fantasy;
+    font-size: 50px;
+    width: auto;
+    text-align: center;
+}
+
+.searchheader{
+font-family: fantasy;
+font-size: 15px;
+width: auto;
+text-align: center;
+}
