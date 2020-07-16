@@ -49,8 +49,16 @@
 }
 
 .searchheader{
+    font-family: fantasy;
+    font-size: 15px;
+    width: auto;
+    text-align: center;
+    }
+    
+.searchbox{
 font-family: fantasy;
 font-size: 15px;
 width: auto;
-text-align: center;
+align-items: center;
 }
+

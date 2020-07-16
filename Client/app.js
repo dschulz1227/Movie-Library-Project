@@ -28,7 +28,7 @@ function getAllMovies(){
         contentType: "application/json",
         url: "http://localhost:3000/api/movies",
         dataType: "json",
-        type: "get"
+        type: "GET"
     }
     )}
 
