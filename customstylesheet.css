@@ -1,0 +1,13 @@
+
+
+
+
+.backgroundImage{
+    background-image: url('photos/blackandwhite.jpg');
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    max-width: 100%;
+}
