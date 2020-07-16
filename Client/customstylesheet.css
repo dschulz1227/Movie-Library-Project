@@ -33,5 +33,10 @@
 }
 
 .buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    max-width: 50%;
     
 }
