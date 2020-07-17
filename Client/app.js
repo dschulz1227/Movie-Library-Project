@@ -4,7 +4,7 @@ $(document).ready(function () {
     getAllMovies();
 })
 
-function getAllMovies(){
+function getAllMovies() {
     $.ajax({
         crossDomain: true,
         contentType: "application/json",
@@ -22,37 +22,35 @@ function getAllMovies(){
                 <td><button onclick='deleteMovie()'>Delete</button></td></tr>`)
             }
         },
-
         error: function (meta, errorThrown, third) {
             console.log(errorThrown);
         }
     })
 }
-function getMovieObject(){
+
+function getMovieObject() {
     var data = {
-    // "id": document.getElementById('id').value,
-    "title": document.getElementById('title').value,
-    "genre": document.getElementById('genre').value,
-    "director":document.getElementById('director').value
+        // "id": document.getElementById('id').value,
+        "title": document.getElementById('title').value,
+        "genre": document.getElementById('genre').value,
+        "director": document.getElementById('director').value
     }
     return data;
 }
 
-function createMovie(){
-    
+function createMovie() {
+
     var data = getMovieObject();
     console.log(data)
-    $(document).ready(function(){
+    $(document).ready(function () {
         $.ajax({
-            type:'POST',
-            url:"http://localhost:3000/api/movies",
-            data:data
-        }).then(function(){
+            type: 'POST',
+            url: "http://localhost:3000/api/movies",
+            data: data
+        }).then(function () {
             getAllMovies();
         })
     })
-
-    
 }
 
 function modifyButton(){
