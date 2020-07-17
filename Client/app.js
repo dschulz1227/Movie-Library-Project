@@ -19,7 +19,7 @@ function getAllMovies() {
                 $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td>
                 <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
                 <td>${data[i]["director"]}</td><td><button onclick=''>Edit</button></td>
-                <td><button onclick='deleteMovie()'>Delete</button></td></tr>`)
+                <td><button onclick='deleteMovie(${data[i]["id"]})'>Delete</button></td></tr>`)
             }
         },
         error: function (meta, errorThrown, third) {
@@ -30,7 +30,7 @@ function getAllMovies() {
 
 function getMovieObject() {
     var data = {
-        // "id": document.getElementById('id').value,
+        "id": document.getElementById('id').value,
         "title": document.getElementById('title').value,
         "genre": document.getElementById('genre').value,
         "director": document.getElementById('director').value
@@ -58,13 +58,13 @@ function modifyButton(){
     $(button).value(Delete)
 }
 
-function deleteMovie() {
-    var data = getMovieObject();
-    $(document).ready(function () {
-        $('#delete').click(function () {
-            $(this.id).remove();
-        }).then(function () {
-            getAllMovies();
-        })
+function deleteMovie(id) {
+    $.ajax({
+        type: 'DELETE',
+        url: "http://localhost:3000/api/movies/" +id
+    }).then(function () {
+        getAllMovies();
     })
+
+
 }
