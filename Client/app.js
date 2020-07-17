@@ -18,7 +18,7 @@ function getAllMovies() {
             for (let i = 0; i < data.length; i++) {
                 $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td>
                 <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
-                <td>${data[i]["director"]}</td><td><button onclick=''>Edit</button></td>
+                <td>${data[i]["director"]}</td><td><button onclick='editMovie(${data[i]["id"]})'>Edit</button></td>
                 <td><button onclick='deleteMovie(${data[i]["id"]})'>Delete</button></td></tr>`)
             }
         },
@@ -67,9 +67,28 @@ function deleteMovie(id) {
 
 function editMovie(id) {
     $.ajax({
-        type: 'PUT',
-        url: "http://localhost:3000/api/movies/" +id
-    }).then(function (){
-        getAllMovies();
-        })
+        crossDomain: true,
+        contentType: "application/json",
+        url: "http://localhost:3000/api/movies/" + id,
+        dataType: "json",
+        type: "get",
+
+        success: function (data, second, third) {
+           $("#title").val(data["title"]);
+        },
+        error: function (meta, errorThrown, third) {
+            console.log(errorThrown);
+        }
+    })
 }
+
+// function updateMovie(){
+//     let movie = {
+//         title = $("title").val()
+//     }
+//     console.log
+// }
+
+
+let $tr = $(this).closest("tr");
+$tr.find("")
