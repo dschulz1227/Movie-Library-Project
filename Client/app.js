@@ -16,11 +16,13 @@ function getAllMovies(){
             // let result = JSON.stringify(data)
             $("#movieTable").find("tbody").html("");
             for (let i = 0; i < data.length; i++) {
-                $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td><td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td><td>${data[i]["director"]}</td></tr>`)
-
-
+                $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td>
+                <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
+                <td>${data[i]["director"]}</td><td><button onclick='..'>Edit</button></td>
+                <td><button onclick='..'>Delete</button></td></tr>`)
             }
         },
+
         error: function (meta, errorThrown, third) {
             console.log(errorThrown);
         }
@@ -51,4 +53,9 @@ function createMovie(){
     })
 
     
+}
+
+function modifyButton(){
+    $(button).value(Edit)
+    $(button).value(Delete)
 }
