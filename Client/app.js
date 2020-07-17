@@ -18,8 +18,8 @@ function getAllMovies(){
             for (let i = 0; i < data.length; i++) {
                 $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td>
                 <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
-                <td>${data[i]["director"]}</td><td><button onclick='..'>Edit</button></td>
-                <td><button onclick='..'>Delete</button></td></tr>`)
+                <td>${data[i]["director"]}</td><td><button onclick=''>Edit</button></td>
+                <td><button onclick='deleteMovie()'>Delete</button></td></tr>`)
             }
         },
 
@@ -58,4 +58,15 @@ function createMovie(){
 function modifyButton(){
     $(button).value(Edit)
     $(button).value(Delete)
+}
+
+function deleteMovie() {
+    var data = getMovieObject();
+    $(document).ready(function () {
+        $('#delete').click(function () {
+            $(this.id).remove();
+        }).then(function () {
+            getAllMovies();
+        })
+    })
 }
