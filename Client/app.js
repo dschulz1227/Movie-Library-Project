@@ -53,10 +53,6 @@ function createMovie() {
     })
 }
 
-function modifyButton(){
-    $(button).value(Edit)
-    $(button).value(Delete)
-}
 
 function deleteMovie(id) {
     $.ajax({
@@ -67,4 +63,13 @@ function deleteMovie(id) {
     })
 
 
+}
+
+function editMovie(id) {
+    $.ajax({
+        type: 'PUT',
+        url: "http://localhost:3000/api/movies/" +id
+    }).then(function (){
+        getAllMovies();
+        })
 }

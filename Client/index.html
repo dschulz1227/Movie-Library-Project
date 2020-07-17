@@ -31,10 +31,11 @@
         <br />
         <h1 class = "header">Damon and Kyle's</h1>
         <h1 class = "header">Movie Library</h1> 
-        <p class = "searchheader">Type something in the search box below to search the catalog:</p>  
-        <input class = "searchbox" id="myInput" type="text" placeholder="Search..">
+        <p class = "searchheader">Type something in the search box below to search the catalog:</p>
+            <input class = "searchbox" id="myInput" type="text" placeholder="Search..">
         <br />
         <br />
+        <button style = "margin: 15px" id = "save" type="button">Save</button>
         <div class = "tableContainer">
             <div class = "container">
                 <table id = "tableHeader" class = "tableFont">
@@ -45,19 +46,21 @@
                 </table>
             </div>
         </div>
-            <label>
+            <label style = "margin: 20px">
                 Title: <input type="text" id="title">
                 Genre: <input type="text" id="genre">
                 Director: <input type="text" id="director">
             </label>
             <button onclick = "createMovie()">Add Movie</button>
         </div>
-        <div class ="buttonContainer">
-            <button id = "edit" type="button">Edit</button>
-            <button id = "delete" type="button">Delete</button>
-        </div>
+        <!-- <div class ="buttonContainer"> -->
+            <!-- <button id = "edit" type="button">Edit</button> -->
+            <!-- <button id = "delete" type="button">Delete</button> -->
+        <!-- </div> -->
         <br />
         <br />  
     </body>
      
 </html>
+
+

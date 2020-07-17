@@ -59,6 +59,8 @@
 font-family: fantasy;
 font-size: 15px;
 width: auto;
-align-items: center;
+margin: 10px;
+text-align: left;
+position: center;
 }
 
