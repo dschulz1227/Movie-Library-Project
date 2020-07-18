@@ -30,7 +30,7 @@ function getAllMovies() {
 
 function getMovieObject() {
     var data = {
-        "id": document.getElementById('id').value,
+        // "id": document.getElementById('id').value,
         "title": document.getElementById('title').value,
         "genre": document.getElementById('genre').value,
         "director": document.getElementById('director').value
@@ -92,3 +92,4 @@ function editMovie(id) {
 
 let $tr = $(this).closest("tr");
 $tr.find("")
+

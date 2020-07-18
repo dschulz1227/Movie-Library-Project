@@ -61,8 +61,14 @@
   },
   {
     "id": 11,
-    "title": "Back to the Future",
-    "director": "Stephen King",
-    "genre": "Sci Fi"
+    "title": "lets try this again",
+    "director": "me",
+    "genre": "fiction"
+  },
+  {
+    "id": 12,
+    "title": "dog days night",
+    "director": "dana",
+    "genre": "musical"
   }
 ]
