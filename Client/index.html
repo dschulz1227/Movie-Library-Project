@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            td, th {
-                border: 3px solid #dddddd;
-                text-align: left;
-                padding: 15px;
-            }
-        </style> 
-        <title>Movie Library</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="customstylesheet.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script> 
-            $(document).ready(function(){
-            $("#myInput").on("keyup", function() {
-              var value = $(this).val().toLowerCase();
-              $("#movieTable tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-              });
+
+<head>
+    <style>
+        td,
+        th {
+            border: 3px solid #dddddd;
+            text-align: left;
+            padding: 15px;
+        }
+    </style>
+    <title>Movie Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="customstylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#movieTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
             });
+<<<<<<< HEAD
           });
         </script>
         <script src="../Client/app.js"></script>
@@ -39,28 +43,65 @@
         <br />
         <div class="sidenav"> 
             <button style = "margin-left: 90px;" id = "save" type="button" onclick="">Save Edit</button>
+=======
+        });
+    </script>
+    <script src="../Client/app.js"></script>
+</head>
+
+<body id="gradient">
+    <!-- <body class = backgroundImage> -->
+
+    <br />
+    <br />
+    <br />
+    <h1 class="header">Damon and Kyle's</h1>
+    <h1 class="header">Movie Library</h1>
+    <p class="searchheader">Type something in the search box below to search the catalog:</p>
+    <div>
+        <input class="searchbox" id="myInput" type="text" placeholder="Search..">
+    </div>
+    <br />
+    <br />
+
+    <div class=row>
+        <div class="sidenav">
+            <button style="margin-left: auto;" id="save" type="button" onclick="">Save Edit</button>
+            <button style="margin-left: auto;" onclick="createMovie()">Add New Movie</button>
+>>>>>>> 7f5f35686b08c28395128ecf973cc8d0af6a6c48
             <br />
-            <label class = "label">
+            <label class="label">
                 Title: <input type="text" id="title">
                 Genre: <input type="text" id="genre">
                 Director: <input type="text" id="director">
             </label>
-            <button style = "margin-left: 65px;" onclick = "createMovie()">Add New Movie</button>
-        </div> 
-        <div class = "tableContainer">
-            <div class = "container">
-                <table id = "tableHeader" class = "center">
-                    <tr><th>Catalog Number</th><th>Title</th><th>Genre</th><th>Director Name</th><th>Edit</th><th>Delete</th></tr>
+            <!-- <button style="margin-left: auto;" onclick="createMovie()">Add New Movie</button> -->
+        </div>
+        <div class="tableContainer">
+            <div class="container">
+                <table id="tableHeader" class="center">
+                    <tr>
+                        <th>Catalog Number</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Director Name</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
                 </table>
-                <table id ="movieTable" class = "center">
-                    <tr><th>Catalog Number</th><th>Title</th><th>Genre</th><th>Director Name</th></tr>
+                <table id="movieTable" class="center">
+                    <tr>
+                        <th>Catalog Number</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Director Name</th>
+                    </tr>
                 </table>
             </div>
         </div>
-        <br />
-        <br />  
-    </body>
-     
+    </div>
+    <br />
+    <br />
+</body>
+
 </html>
-
-
