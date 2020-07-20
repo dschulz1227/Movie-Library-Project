@@ -1,5 +1,11 @@
 
+/* div{
+  display: grid;
+} */
 
+body{
+  display:grid
+}
 
 
 .backgroundImage{
@@ -43,6 +49,7 @@
 }
 
 .header{
+    display: grid;
     font-family: fantasy;
     font-size: 50px;
     width: auto;
@@ -57,10 +64,12 @@
 }
     
 .searchbox{
+display: grid;
+justify-content: center;
 font-family: fantasy;
 font-size: 15px;
-width: 150px;
-margin-left: 680px;
+width: auto;
+margin-left: auto;
 margin-right: auto;
 }
 
@@ -69,7 +78,7 @@ margin-right: auto;
     margin-right: auto;
 }
 .sidenav {
-    width: 270px;
+    width: 200px;
     position: fixed;
     z-index: 1;
     top: 20px;
@@ -77,6 +86,7 @@ margin-right: auto;
     background: #eee;
     overflow-x: hidden;
     padding: 8px 0;
+    
   }
   
   .sidenav a {
@@ -87,7 +97,7 @@ margin-right: auto;
     display: block;
   }
   
-  .sidenav a:hover {
+  sidenav a:hover {
     color: #064579;
   }
   
@@ -111,3 +121,10 @@ margin-right: auto;
   .saveButton{
       position: center
   }
+
+  #gradient {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(179, 179, 179)); /* Standard syntax (must be last) */
+  }
+
