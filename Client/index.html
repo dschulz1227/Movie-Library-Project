@@ -24,30 +24,24 @@
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
-        });
-    </script>
-    <script src="../Client/app.js"></script>
-</head>
-
-<body id="gradient">
-    <!-- <body class = backgroundImage> -->
-
-    <br />
-    <br />
-    <br />
-    <h1 class="header">Damon and Kyle's</h1>
-    <h1 class="header">Movie Library</h1>
-    <p class="searchheader">Type something in the search box below to search the catalog:</p>
-    <div>
-        <input class="searchbox" id="myInput" type="text" placeholder="Search..">
-    </div>
-    <br />
-    <br />
-
-    <div>
-        <div class="sidenav">
-            <button  style="justify-content:center" id="save" type="button" onclick="">Save Edit</button>
-            <button  style="justify-content:center" onclick="createMovie()">Add New Movie</button>
+          });
+        </script>
+        <script src="../Client/app.js"></script>
+    </head>
+    <body class = backgroundImage>
+        <br />
+        <br />
+        <br />
+        <h1 class = "header">Damon and Kyle's</h1>
+        <h1 class = "header">Movie Library</h1> 
+        <p class = "searchheader">Type something in the search box below to search the catalog:</p>
+        <div>
+            <input class = "searchbox" id="myInput" type="text" placeholder="Search..">
+        </div>
+        <br />
+        <br />
+        <div class="sidenav"> 
+            <button style = "margin-left: 90px;" id = "save" type="button" onclick="">Save Edit</button>
             <br />
             <label class="label">
                 Title: <input type="text" id="title">

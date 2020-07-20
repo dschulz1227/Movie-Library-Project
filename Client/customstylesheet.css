@@ -9,10 +9,10 @@ body{
 
 
 .backgroundImage{
-    background-image: url('photos/blackandwhite.jpg');
+    background-image: url(../Client/photos/theater.jpg);
     height: auto;
     width: auto;
-    background-repeat: no-repeat;
+    background-repeat: auto;
     background-size: 100%;
     background-position: center;
     max-width: 100%;
@@ -49,18 +49,19 @@ body{
 }
 
 .header{
-    display: grid;
-    font-family: fantasy;
+    font-family: 'Architects Daughter', cursive;
     font-size: 50px;
     width: auto;
     text-align: center;
+    color:ivory;
 }
 
 .searchheader{
-    font-family: fantasy;
+    font-family: 'Architects Daughter', cursive;
     font-size: 15px;
     width: auto;
     text-align: center;
+    color:ivory;
 }
     
 .searchbox{
