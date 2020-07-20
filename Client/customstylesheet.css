@@ -74,10 +74,10 @@ margin-right: auto;
 }
 
 .center{
-    margin-left: auto;
-    margin-right: auto;
+justify-content: center;
 }
 .sidenav {
+    display: grid;
     width: 200px;
     position: fixed;
     z-index: 1;
@@ -97,8 +97,8 @@ margin-right: auto;
     display: block;
   }
   
-  sidenav a:hover {
-    color: #064579;
+  sidenav:hover {
+    color: red;
   }
   
   .main {
