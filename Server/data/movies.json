@@ -52,5 +52,17 @@
     "title": "House of Dolls",
     "director": "T Pain",
     "genre": "Horror"
+  },
+  {
+    "id": 10,
+    "title": "number 23",
+    "director": "Jim Carey",
+    "genre": "Comedy"
+  },
+  {
+    "id": 11,
+    "title": "smokey and the bandit",
+    "director": "burt rendalds",
+    "genre": "classic"
   }
 ]

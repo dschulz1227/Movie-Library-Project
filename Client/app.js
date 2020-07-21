@@ -18,7 +18,7 @@ function getAllMovies() {
             for (let i = 0; i < data.length; i++) {
                 $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td>
                 <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
-                <td>${data[i]["director"]}</td><td><button onclick='editMovie(${data[i]["id"]})'>Edit</button></td>
+                <td>${data[i]["director"]}</td><td><button onclick='loadMovieForm(${data[i]["id"]})'>Edit</button></td>
                 <td><button onclick='deleteMovie(${data[i]["id"]})'>Delete</button></td></tr>`)
             }
         },
@@ -65,7 +65,7 @@ function deleteMovie(id) {
 
 }
 
-function editMovie(id) {    // function loadMovieToForm
+function loadMovieForm(id) {    // function loadMovieToForm
     $.ajax({
         crossDomain: true,
         contentType: "application/json",
@@ -77,7 +77,8 @@ function editMovie(id) {    // function loadMovieToForm
            $("#title").val(data["title"]);
            $("#genre").val(data["genre"]);
            $("#director").val(data["director"]);
-
+           $("#id").val(data["id"]);
+            // place id of movie in the display:none element
         },
         error: function (meta, errorThrown, third) {
             console.log(errorThrown);
@@ -88,13 +89,34 @@ function editMovie(id) {    // function loadMovieToForm
 
 function putMovie(movie) {  // called when "Save Edit" button is clicked
     var data = getMovieObject();
-    // make the PUT API call
+    console.log(data)
+    // let test = $("#id");
+    // console.log('test', test);
+    // let test2 = test.val();
+    // console.log('test2', test2);
+    data.id = $("#id").val();
+    console.log(data.id)
+
+    // then go get the id from the page
+    // assign the id to data.id
+    // console.log(data)
+        $.ajax({
+            type: 'PUT',
+            url: "http://localhost:3000/api/movies",
+            data: data
+        }).then(function () {
+            getAllMovies();
+        })
+
 }
+ 
+  // make the PUT API call
 
 // function updateMovie(){
 //     let movie = {
 //         title = $("title").val()
 //     }
+
 //     console.log
 // }
 
