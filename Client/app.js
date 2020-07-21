@@ -89,24 +89,22 @@ function loadMovieForm(id) {    // function loadMovieToForm
 
 function putMovie(movie) {  // called when "Save Edit" button is clicked
     var data = getMovieObject();
+    let idFromInput = parseInt($("#id").val());    
+    data.id = idFromInput;
     console.log(data)
-    // let test = $("#id");
-    // console.log('test', test);
-    // let test2 = test.val();
-    // console.log('test2', test2);
-    data.id = $("#id").val();
-    console.log(data.id)
+    
 
     // then go get the id from the page
     // assign the id to data.id
     // console.log(data)
         $.ajax({
+            contentType: 'application/json',
             type: 'PUT',
-            url: "http://localhost:3000/api/movies",
-            data: data
+            url: "http://localhost:3000/api/movies/",
+            data: JSON.stringify(data),
         }).then(function () {
             getAllMovies();
-        })
+        });
 
 }
  
