@@ -42,15 +42,33 @@
     "genre": "Family"
   },
   {
-    "id": 8,
-    "title": "New Movie",
+    "title": "old movie",
+    "genre": "Horror",
     "director": "David L.",
-    "genre": "Horror"
+    "id": 8
   },
   {
-    "id": 9,
-    "title": "House of Dolls",
+    "title": "House of Wax 2",
+    "genre": "Horror",
     "director": "T Pain",
-    "genre": "Horror"
+    "id": 9
+  },
+  {
+    "id": 10,
+    "title": "number 23",
+    "director": "Jim Carey",
+    "genre": "Comedy"
+  },
+  {
+    "id": 11,
+    "title": "smokey and the bandit",
+    "director": "burt rendalds",
+    "genre": "classic"
+  },
+  {
+    "title": "TEST AGAIN",
+    "genre": "TEST",
+    "director": "TEST",
+    "id": 12
   }
 ]
