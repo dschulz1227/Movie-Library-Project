@@ -42,7 +42,7 @@
     "genre": "Family"
   },
   {
-    "title": "old movie",
+    "title": "new movie",
     "genre": "Horror",
     "director": "David L.",
     "id": 8
@@ -66,9 +66,15 @@
     "genre": "classic"
   },
   {
-    "title": "TEST AGAIN",
+    "title": "TEST tres",
     "genre": "TEST",
     "director": "TEST",
     "id": 12
+  },
+  {
+    "id": 13,
+    "title": "Big Wed",
+    "director": "unknown",
+    "genre": "surfing"
   }
 ]

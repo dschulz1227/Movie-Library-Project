@@ -49,6 +49,7 @@ function createMovie() {
             data: data
         }).then(function () {
             getAllMovies();
+            clearForm()
         })
     })
 }
@@ -104,6 +105,7 @@ function putMovie(movie) {  // called when "Save Edit" button is clicked
             data: JSON.stringify(data),
         }).then(function () {
             getAllMovies();
+            clearForm()
         });
 
 }
@@ -122,3 +124,9 @@ function putMovie(movie) {  // called when "Save Edit" button is clicked
 let $tr = $(this).closest("tr");
 $tr.find("")
 
+function clearForm(){
+    document.getElementById('id').value=''; 
+    document.getElementById('title').value=''; 
+    document.getElementById('genre').value=''; 
+    document.getElementById('director').value=''; 
+} 
