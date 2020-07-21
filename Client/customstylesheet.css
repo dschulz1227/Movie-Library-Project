@@ -1,140 +1,152 @@
-
 /* div{
   display: grid;
 } */
 
-body{
-  display:grid
+body {
+  display: grid
 }
 
 
-.backgroundImage{
-    background-image: url(../Client/photos/theater.jpg);
-    height: auto;
-    width: auto;
-    background-repeat: auto;
-    background-size: 100%;
-    background-position: center;
-    max-width: 100%;
+.backgroundImage {
+  background-image: url(../Client/photos/theater.jpg);
+  height: auto;
+  width: auto;
+  background-repeat: auto;
+  background-size: 100%;
+  background-position: center;
+  max-width: 100%;
 }
 
 .tableContainer {
-    max-width: fit-content;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    padding:10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    position: center;
+  max-width: fit-content;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: center;
 }
 
 .headercontainer {
   max-width: fit-content;
   border-radius: 5px;
   background-color: rgb(179, 179, 136);
-  padding:20px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto
 }
 
 .container {
-    max-width: fit-content;
-    border-radius: 5px;
-    background-color: ivory;
-    padding:20px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: fit-content;
+  border-radius: 5px;
+  background-color: ivory;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.buttonContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-    max-width: 50%;
-    
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  max-width: 50%;
+
 }
 
-.header{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 50px;
-    width: auto;
-    text-align: center;
-    color:ivory;
+.header {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 50px;
+  width: auto;
+  text-align: center;
+  color: ivory;
 }
 
-.searchheader{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 15px;
-    width: auto;
-    text-align: center;
-    color:ivory;
-}
-    
-.searchbox{
-display: grid;
-justify-content: center;
-font-family: fantasy;
-font-size: 15px;
-width: auto;
-margin-left: auto;
-margin-right: auto;
+.searchheader {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  color: ivory;
 }
 
-.center{
-justify-content: center;
+.searchbox {
+  display: grid;
+  justify-content: center;
+  font-family: fantasy;
+  font-size: 15px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
+
+.center {
+  justify-content: center;
+}
+
 .sidenav {
-    display: grid;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 20px;
-    left: 10px;
-    background: #eee;
-    overflow-x: hidden;
-    padding: 8px 0;
-    
-  }
-  
-  .sidenav a {
+  display: grid;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+  border: white;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+/* .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
     color: #2196F3;
     display: block;
   }
-  
-  sidenav:hover {
-    color: red;
-  }
-  
-  .main {
-    margin-left: 140px; /* Same width as the sidebar + left position in px */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+   */
+
+.headercontainer:hover {
+  color: red;
+}
+
+.main {
+  margin-left: 140px;
+  /* Same width as the sidebar + left position in px */
+  font-size: 28px;
+  /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
   }
 
-  .label{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
+  .sidenav a {
+    font-size: 18px;
   }
+}
 
-  .saveButton{
-      position: center
-  }
+.label {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
 
-  #gradient {
-    height: 200px;
-    background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(179, 179, 179)); /* Standard syntax (must be last) */
-  }
+.saveButton {
+  position: center
+}
 
+#gradient {
+  height: 200px;
+  background-color: red;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(179, 179, 179));
+  /* Standard syntax (must be last) */
+}
