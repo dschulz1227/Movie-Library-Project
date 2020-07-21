@@ -65,7 +65,7 @@ function deleteMovie(id) {
 
 }
 
-function editMovie(id) {
+function editMovie(id) {    // function loadMovieToForm
     $.ajax({
         crossDomain: true,
         contentType: "application/json",
@@ -75,11 +75,20 @@ function editMovie(id) {
 
         success: function (data, second, third) {
            $("#title").val(data["title"]);
+           $("#genre").val(data["genre"]);
+           $("#director").val(data["director"]);
+
         },
         error: function (meta, errorThrown, third) {
             console.log(errorThrown);
         }
-    })
+    });
+    
+}
+
+function putMovie(movie) {  // called when "Save Edit" button is clicked
+    var data = getMovieObject();
+    // make the PUT API call
 }
 
 // function updateMovie(){
