@@ -66,15 +66,9 @@
     "genre": "classic"
   },
   {
-    "title": "TEST tres",
-    "genre": "TEST",
-    "director": "TEST",
-    "id": 12
-  },
-  {
-    "id": 13,
-    "title": "Big Wed",
+    "title": "Big tues",
+    "genre": "surfing",
     "director": "unknown",
-    "genre": "surfing"
+    "id": 12
   }
 ]
