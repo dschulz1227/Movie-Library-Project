@@ -24,54 +24,54 @@
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
-          });
-        </script>
-        <script src="../Client/app.js"></script>
-    </head>
-    <body class = backgroundImage>
+        });
+    </script>
+    <script src="../Client/app.js"></script>
+</head>
+
+<body class=backgroundImage>
+    <div class="headercontainer">
+        <h1 class="header">Damon and Kyle's</h1>
+        <h1 class="header">Movie Library</h1>
+        <p class="searchheader">Type something in the search box below to search the catalog:</p>
+    </div>
+    <div>
+        <input class="searchbox" id="myInput" type="text" placeholder="Search..">
+    </div>
+
+    <div class="sidenav">
+        <button id="save" type="button" onclick="">Save Edit</button>
+        <button onclick="createMovie()">Add New Movie</button>
         <br />
-        <br />
-        <br />
-        <h1 class = "header">Damon and Kyle's</h1>
-        <h1 class = "header">Movie Library</h1> 
-        <p class = "searchheader">Type something in the search box below to search the catalog:</p>
-        <div>
-            <input class = "searchbox" id="myInput" type="text" placeholder="Search..">
+        <label class="label">
+            Title: <input type="text" id="title">
+            Genre: <input type="text" id="genre">
+            Director: <input type="text" id="director">
+        </label>
+
+    </div>
+    <div class="tableContainer">
+        <div class="container">
+            <table id="tableHeader" class="center">
+                <tr>
+                    <th>Catalog Number</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Director Name</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </table>
+            <table id="movieTable" class="center">
+                <tr>
+                    <th>Catalog Number</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Director Name</th>
+                </tr>
+            </table>
         </div>
-        <br />
-        <br />
-        <div class="sidenav"> 
-            <button style = "margin-left: 90px;" id = "save" type="button" onclick="">Save Edit</button>
-            <br />
-            <label class="label">
-                Title: <input type="text" id="title">
-                Genre: <input type="text" id="genre">
-                Director: <input type="text" id="director">
-            </label>
-            
-        </div>
-        <div class="tableContainer">
-            <div class="container">
-                <table id="tableHeader" class="center">
-                    <tr>
-                        <th>Catalog Number</th>
-                        <th>Title</th>
-                        <th>Genre</th>
-                        <th>Director Name</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </table>
-                <table id="movieTable" class="center">
-                    <tr>
-                        <th>Catalog Number</th>
-                        <th>Title</th>
-                        <th>Genre</th>
-                        <th>Director Name</th>
-                    </tr>
-                </table>
-            </div>
-        </div>
+    </div>
     </div>
     <br />
     <br />
