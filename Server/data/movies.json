@@ -39,6 +39,34 @@
     "title": "new movie",
     "genre": "Horror",
     "director": "David L.",
+<<<<<<< HEAD
     "id": 7
+=======
+    "id": 8
+  },
+  {
+    "title": "House of Wax 2",
+    "genre": "Horror",
+    "director": "T Pain",
+    "id": 9
+  },
+  {
+    "id": 10,
+    "title": "number 23",
+    "director": "Jim Carey",
+    "genre": "Comedy"
+  },
+  {
+    "id": 11,
+    "title": "smokey and the bandit",
+    "director": "burt rendalds",
+    "genre": "classic"
+  },
+  {
+    "title": "Big Wednesday",
+    "genre": "surfing",
+    "director": "unknown",
+    "id": 12
+>>>>>>> 0d96b4bd31b8ada6629da664a4b48be83305ddc5
   }
 ]
