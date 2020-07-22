@@ -1,42 +1,36 @@
 [
   {
     "id": 1,
-    "title": "The Departed",
-    "director": "Martin Scorsese",
-    "genre": "Drama"
-  },
-  {
-    "id": 2,
     "title": "Inception",
     "director": "Christopher Nolan",
     "genre": "Drama"
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Pineapple Express",
     "director": "David Gordon Green",
     "genre": "Comedy"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Die Hard",
     "director": "John McTiernan",
     "genre": "Action"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "5th element",
     "director": "Michael Bay",
     "genre": "Romance"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Harry Potter",
     "director": "Ridley Scott",
     "genre": "Fantasy"
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "Bee Movie",
     "director": "Jerry S.",
     "genre": "Family"
@@ -45,30 +39,6 @@
     "title": "new movie",
     "genre": "Horror",
     "director": "David L.",
-    "id": 8
-  },
-  {
-    "title": "House of Wax 2",
-    "genre": "Horror",
-    "director": "T Pain",
-    "id": 9
-  },
-  {
-    "id": 10,
-    "title": "number 23",
-    "director": "Jim Carey",
-    "genre": "Comedy"
-  },
-  {
-    "id": 11,
-    "title": "smokey and the bandit",
-    "director": "burt rendalds",
-    "genre": "classic"
-  },
-  {
-    "title": "Big tues",
-    "genre": "surfing",
-    "director": "unknown",
-    "id": 12
+    "id": 7
   }
 ]

@@ -19,7 +19,7 @@ function getAllMovies() {
                 $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td>
                 <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
                 <td>${data[i]["director"]}</td><td><button onclick='loadMovieForm(${data[i]["id"]})'>Edit</button></td>
-                <td><button onclick='deleteMovie(${data[i]["id"]})'>Delete</button></td></tr>`)
+                <td><button onclick='confirmDelete(${data[i]["id"]})'>Delete</button></td></tr>`)
             }
         },
         error: function (meta, errorThrown, third) {
@@ -62,9 +62,14 @@ function deleteMovie(id) {
     }).then(function () {
         getAllMovies();
     })
-
-
 }
+
+function confirmDelete(id) {
+    if (confirm("Are you sure you want to delete this movie?")) {    
+      deleteMovie(id);
+    } 
+  }
+
 
 function loadMovieForm(id) {    // function loadMovieToForm
     $.ajax({
@@ -130,3 +135,5 @@ function clearForm(){
     document.getElementById('genre').value=''; 
     document.getElementById('director').value=''; 
 } 
+
+
