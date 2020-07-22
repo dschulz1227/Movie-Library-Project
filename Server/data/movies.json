@@ -1,42 +1,36 @@
 [
   {
     "id": 1,
-    "title": "The Departed",
-    "director": "Martin Scorsese",
-    "genre": "Drama"
-  },
-  {
-    "id": 2,
     "title": "Inception",
     "director": "Christopher Nolan",
     "genre": "Drama"
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Pineapple Express",
     "director": "David Gordon Green",
     "genre": "Comedy"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Die Hard",
     "director": "John McTiernan",
     "genre": "Action"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "5th element",
     "director": "Michael Bay",
     "genre": "Romance"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Harry Potter",
     "director": "Ridley Scott",
     "genre": "Fantasy"
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "Bee Movie",
     "director": "Jerry S.",
     "genre": "Family"
@@ -45,6 +39,9 @@
     "title": "new movie",
     "genre": "Horror",
     "director": "David L.",
+<<<<<<< HEAD
+    "id": 7
+=======
     "id": 8
   },
   {
@@ -64,5 +61,15 @@
     "title": "smokey and the bandit",
     "director": "burt rendalds",
     "genre": "classic"
+<<<<<<< HEAD
+=======
+  },
+  {
+    "title": "Big Wednesday",
+    "genre": "surfing",
+    "director": "unknown",
+    "id": 12
+>>>>>>> 0d96b4bd31b8ada6629da664a4b48be83305ddc5
+>>>>>>> 60fc717e60cc1468924c0fc25aaf24cc68ef3eb3
   }
 ]
