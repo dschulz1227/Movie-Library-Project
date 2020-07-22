@@ -50,7 +50,7 @@
   {
     "title": "House of Wax 2",
     "genre": "Horror",
-    "director": "T Pain",
+    "director": "Paris Hilton",
     "id": 9
   },
   {
@@ -64,11 +64,5 @@
     "title": "smokey and the bandit",
     "director": "burt rendalds",
     "genre": "classic"
-  },
-  {
-    "title": "Big Wednesday",
-    "genre": "surfing",
-    "director": "unknown",
-    "id": 12
   }
 ]

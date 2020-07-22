@@ -14,9 +14,10 @@ function getAllMovies() {
 
         success: function (data, second, third) {
             // let result = JSON.stringify(data)
-            $("#movieTable").find("tbody").html("");
+            $("#movieTable").find("tbody").html('<tr><th>#</th><th>Title</th><th>Genre</th><th>Director Name</th><th>Edit</th><th>Delete</th></tr>');
             for (let i = 0; i < data.length; i++) {
-                $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td>
+                $("#movieTable").find('tbody').append(`
+                <tr><td>${data[i]["id"]}</td>
                 <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
                 <td>${data[i]["director"]}</td><td><button onclick='loadMovieForm(${data[i]["id"]})'>Edit</button></td>
                 <td><button onclick='deleteMovie(${data[i]["id"]})'>Delete</button></td></tr>`)
@@ -130,3 +131,15 @@ function clearForm(){
     document.getElementById('genre').value=''; 
     document.getElementById('director').value=''; 
 } 
+
+
+
+function deletePrompt() {
+    var txt;
+    if (confirm("Confirm you wish to delete this movie!")) {
+      txt = "You pressed OK!";
+    } 
+    else {
+      txt = "You pressed Cancel!";
+    }
+}
