@@ -13,14 +13,9 @@ function getAllMovies() {
         type: "get",
 
         success: function (data, second, third) {
-            // let result = JSON.stringify(data)
             $("#movieTable").find("tbody").html('<tr><th>#</th><th>Title</th><th>Genre</th><th>Director Name</th><th>Edit</th><th>Delete</th></tr>');
             for (let i = 0; i < data.length; i++) {
-                $("#movieTable").find('tbody').append(`
-                <tr><td>${data[i]["id"]}</td>
-                <td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td>
-                <td>${data[i]["director"]}</td><td><button onclick='loadMovieForm(${data[i]["id"]})'>Edit</button></td>
-                <td><button onclick='confirmDelete(${data[i]["id"]})'>Delete</button></td></tr>`)
+                $("#movieTable").find('tbody').append(`<tr><td>${data[i]["id"]}</td><td>${data[i]["title"]}</td><td>${data[i]["genre"]}</td><td>${data[i]["director"]}</td><td><button onclick='loadMovieForm(${data[i]["id"]})'>Edit</button></td><td><button onclick='confirmDelete(${data[i]["id"]})'>Delete</button></td></tr>`)
             }
         },
         error: function (meta, errorThrown, third) {
@@ -31,7 +26,7 @@ function getAllMovies() {
 
 function getMovieObject() {
     var data = {
-        // "id": document.getElementById('id').value,
+  
         "title": document.getElementById('title').value,
         "genre": document.getElementById('genre').value,
         "director": document.getElementById('director').value
@@ -72,7 +67,7 @@ function confirmDelete(id) {
   }
 
 
-function loadMovieForm(id) {    // function loadMovieToForm
+function loadMovieForm(id) {    
     $.ajax({
         crossDomain: true,
         contentType: "application/json",
@@ -84,8 +79,8 @@ function loadMovieForm(id) {    // function loadMovieToForm
            $("#title").val(data["title"]);
            $("#genre").val(data["genre"]);
            $("#director").val(data["director"]);
-           $("#id").val(data["id"]);
-            // place id of movie in the display:none element
+           $("#id").val(data["id"]); 
+     
         },
         error: function (meta, errorThrown, third) {
             console.log(errorThrown);
@@ -94,16 +89,12 @@ function loadMovieForm(id) {    // function loadMovieToForm
     
 }
 
-function putMovie(movie) {  // called when "Save Edit" button is clicked
+function putMovie(movie) {  
     var data = getMovieObject();
     let idFromInput = parseInt($("#id").val());    
     data.id = idFromInput;
     console.log(data)
-    
 
-    // then go get the id from the page
-    // assign the id to data.id
-    // console.log(data)
         $.ajax({
             contentType: 'application/json',
             type: 'PUT',
@@ -116,15 +107,6 @@ function putMovie(movie) {  // called when "Save Edit" button is clicked
 
 }
  
-  // make the PUT API call
-
-// function updateMovie(){
-//     let movie = {
-//         title = $("title").val()
-//     }
-
-//     console.log
-// }
 
 
 let $tr = $(this).closest("tr");
@@ -138,16 +120,3 @@ function clearForm(){
 } 
 
 
-<<<<<<< HEAD
-
-function deletePrompt() {
-    var txt;
-    if (confirm("Confirm you wish to delete this movie!")) {
-      txt = "You pressed OK!";
-    } 
-    else {
-      txt = "You pressed Cancel!";
-    }
-}
-=======
->>>>>>> 60fc717e60cc1468924c0fc25aaf24cc68ef3eb3

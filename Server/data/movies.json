@@ -39,9 +39,12 @@
     "title": "new movie",
     "genre": "Horror",
     "director": "David L.",
-<<<<<<< HEAD
     "id": 7
-=======
+  },
+  {
+    "title": "House of Wax 3",
+    "genre": "Horror",
+    "director": "Paris Hilton",
     "id": 8
   },
   {
@@ -51,25 +54,15 @@
     "id": 9
   },
   {
-    "id": 10,
-    "title": "number 23",
+    "title": "number 24",
+    "genre": "Comedy",
     "director": "Jim Carey",
-    "genre": "Comedy"
+    "id": 10
   },
   {
     "id": 11,
     "title": "smokey and the bandit",
     "director": "burt rendalds",
     "genre": "classic"
-<<<<<<< HEAD
-=======
-  },
-  {
-    "title": "Big Wednesday",
-    "genre": "surfing",
-    "director": "unknown",
-    "id": 12
->>>>>>> 0d96b4bd31b8ada6629da664a4b48be83305ddc5
->>>>>>> 60fc717e60cc1468924c0fc25aaf24cc68ef3eb3
   }
 ]
